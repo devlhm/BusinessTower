@@ -1,14 +1,25 @@
 extends Area2D
 
+var isCleaning = false
 var speed = 100
-
 onready var animatedSprite = $"AnimatedSprite"
 
 func _ready():
 	animatedSprite.play("Idle")
+	
+func _process(delta):
+	if Input.is_action_just_pressed("use_tool"):
+		animatedSprite.play("Clean")
+		isCleaning = true
+		
+	if !animatedSprite.is_playing():
+		animatedSprite.play("Idle")
 
 func _physics_process(delta):
 	
+	if isCleaning:
+		 pass
+		
 	var motion = Vector2();
 
 	if Input.is_action_pressed("move_left"):

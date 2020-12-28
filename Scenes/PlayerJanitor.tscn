@@ -38,7 +38,7 @@ animations = [ {
 "speed": 2.0
 }, {
 "frames": [ ExtResource( 10 ), ExtResource( 14 ), ExtResource( 23 ), ExtResource( 3 ), ExtResource( 19 ), ExtResource( 1 ) ],
-"loop": true,
+"loop": false,
 "name": "Clean",
 "speed": 5.0
 }, {
@@ -52,6 +52,7 @@ animations = [ {
 extents = Vector2( 5.08752, 14.1391 )
 
 [node name="Player" type="Area2D"]
+position = Vector2( -0.0393724, 0.0393724 )
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
@@ -59,7 +60,8 @@ __meta__ = {
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
-animation = "Idle"
+animation = "Clean"
+frame = 5
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
