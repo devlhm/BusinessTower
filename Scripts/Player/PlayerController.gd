@@ -9,8 +9,10 @@ func _ready():
 	
 func _process(delta):
 	if Input.is_action_just_pressed("use_tool"):
-		animatedSprite.play("Clean")
 		isCleaning = true
+		
+	if isCleaning:
+		animatedSprite.play("Clean")
 		
 	if !animatedSprite.is_playing():
 		animatedSprite.play("Idle")
@@ -18,7 +20,7 @@ func _process(delta):
 func _physics_process(delta):
 	
 	if isCleaning:
-		 pass
+		return
 		
 	var motion = Vector2();
 
@@ -39,3 +41,10 @@ func _physics_process(delta):
 		animatedSprite.play("Walk")
 	else:
 		animatedSprite.play("Idle")
+
+
+
+func _on_AnimatedSprite_frame_changed():
+	if animatedSprite.frame == 6:
+		isCleaning = false
+		animatedSprite.stop()
