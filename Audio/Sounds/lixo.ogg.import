@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/lixo.ogg-f9720cfa58e7ce66f4da02e664ef4ddd.oggstr"
+
+[deps]
+
+source_file="res://Audio/Sounds/lixo.ogg"
+dest_files=[ "res://.import/lixo.ogg-f9720cfa58e7ce66f4da02e664ef4ddd.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,3 +1,6 @@
 extends Node
 
-var isCleaning = false
+const GROUP_PLAYER = "player"
+
+func _ready():
+	pass

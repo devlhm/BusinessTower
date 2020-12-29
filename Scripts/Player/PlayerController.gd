@@ -5,6 +5,7 @@ var speed = 100
 onready var animatedSprite = $"AnimatedSprite"
 
 func _ready():
+	add_to_group(Game.GROUP_PLAYER)
 	animatedSprite.play("Idle")
 	
 func _process(delta):
@@ -45,6 +46,6 @@ func _physics_process(delta):
 
 
 func _on_AnimatedSprite_frame_changed():
-	if animatedSprite.frame == 6:
+	if animatedSprite.frame == 7:
 		isCleaning = false
 		animatedSprite.stop()

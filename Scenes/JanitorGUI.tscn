@@ -1,0 +1,24 @@
+[gd_scene format=2]
+
+[node name="GUI" type="MarginContainer"]
+margin_right = 1024.0
+margin_bottom = 50.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_right = 1024.0
+margin_bottom = 50.0
+
+[node name="ProgressBar" type="ProgressBar" parent="HBoxContainer"]
+margin_right = 600.0
+margin_bottom = 50.0
+percent_visible = false
+
+[node name="TextureProgress" type="TextureProgress" parent="HBoxContainer/ProgressBar"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
